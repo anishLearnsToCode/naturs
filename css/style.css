@@ -55,6 +55,7 @@ body {
     display: block;
     color: white;
     text-transform: uppercase;
+    backface-visibility: hidden;
 }
 
 .heading-primary > span {
@@ -68,6 +69,7 @@ body {
 
     animation-name: slideFromLeft, opacityChange;
     animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/
 }
 
 .heading-primary-sub {
@@ -77,6 +79,7 @@ body {
 
     animation-name: slideFromRight, opacityChange;
     animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/
 }
 
 @keyframes slideFromLeft{
@@ -84,9 +87,7 @@ body {
 }
 
 @keyframes slideFromRight {
-    0% {
-        transform: translateX(100px);
-    }
+    0% { transform: translateX(100px); }
 }
 
 @keyframes opacityChange {
