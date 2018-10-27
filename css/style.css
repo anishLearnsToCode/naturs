@@ -48,7 +48,6 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    /*background-color: lightgray;*/
     transform: translateY(-50%) translateX(-50%);
 }
 
@@ -56,23 +55,41 @@ body {
     display: block;
     color: white;
     text-transform: uppercase;
-    /*background-color: lightgray;*/
 }
 
 .heading-primary > span {
     display: block;
-    /*background-color: lightblue;*/
-    /*margin-bottom: 20px;*/
 }
 
 .heading-primary-main {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    animation-name: slideFromLeft, opacityChange;
+    animation-duration: 1s;
 }
 
 .heading-primary-sub {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.5px;
+
+    animation-name: slideFromRight, opacityChange;
+    animation-duration: 1s;
+}
+
+@keyframes slideFromLeft{
+    0% { transform: translateX(-50px); }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes opacityChange {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
