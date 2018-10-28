@@ -77,38 +77,6 @@ a {
     transform: translateX(-50%);
 }
 
-.heading-primary {
-    display: block;
-    color: white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    text-align: center;
-}
-
-.heading-primary > span {
-    display: block;
-}
-
-.heading-primary-main {
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-
-    animation-name: slideFromLeft, opacityChange;
-    animation-duration: 1s;
-    /*animation-timing-function: ease-out;*/
-}
-
-.heading-primary-sub {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 17.5px;
-
-    animation-name: slideFromRight, opacityChange;
-    animation-duration: 1s;
-    /*animation-timing-function: ease-out;*/
-}
-
 @keyframes slideFromLeft{
     0% { transform: translateX(-50px); }
 }
@@ -126,57 +94,15 @@ a {
     100% { opacity: 1; }
 }
 
-.button {
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 200px;
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.2) ;
-
+p::before {
+    background: red;
+    font-size: 30px;
     position: relative;
-
-    font-weight: 700;
-    font-size: 17px;
-    letter-spacing: 5px;
-
-    animation-name: slideInUp, opacityChange;
-    animation-duration: 0.7s;
-
-    transition-duration: 0.2s;
-}
-.button:hover {
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.4) ;
-    transform: translateY(-5px);
-}
-.button:active {
-    transform: translateY(0);
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.1) ;
-}
-.button::after {
-    position: absolute;
-    top: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    top: 10px;
     left: 0;
-    z-index: -1;
-
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-
-    border-radius: 100px;
-}
-.button:hover::after {
+    bottom: 0;
     content: '';
-    transform: scale(2);
-}
-
-.button-white {
-    background-color: white;
-    color: #777;
-}
-.button-white:hover {
-    background-color: lightgreen;
-    color: white;
-}
-.button-white::after {
-    background-color: white;
-    color: #777;
 }
