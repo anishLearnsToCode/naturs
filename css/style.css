@@ -1,10 +1,8 @@
 /*
 COLORS:
-
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
 
 * {
@@ -19,14 +17,27 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 10px;
+    /*padding: 10px;*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
 }
 
 .header {
     position: relative;
     height: 100vh;
 
-    background-image: linear-gradient(to right bottom, rgba(126,213,111, 0.7), rgb(40,180,133, 0.7)), url("../img/hero.jpg");
+    background-image: linear-gradient(to right bottom, rgba(126,213,111, 0.7), rgba(40,180,133, 0.7)), url("../img/hero.jpg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -44,7 +55,7 @@ body {
     height: 35px;
 }
 
-.absaolute-center {
+.absolute-center {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -62,12 +73,14 @@ body {
 .margin-center {
     margin-left: 50%;
     transform: translateX(-50%);
+}
 
 .heading-primary {
     display: block;
     color: white;
     text-transform: uppercase;
     backface-visibility: hidden;
+    text-align: center;
 }
 
 .heading-primary > span {
@@ -102,7 +115,67 @@ body {
     0% { transform: translateX(100px); }
 }
 
+@keyframes slideInUp {
+    0% { transform: translateY(50px); }
+}
+
 @keyframes opacityChange {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 200px;
+    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.2) ;
+
+    position: relative;
+
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 5px;
+
+    animation-name: slideInUp, opacityChange;
+    animation-duration: 0.7s;
+
+    transition: all 0.2s;
+}
+.button:hover {
+    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.4) ;
+    transform: translateY(-5px);
+}
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.1) ;
+}
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+
+    transition: all 0.4s;
+}
+.button:hover::after {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+.button-white {
+    background-color: white;
+    color: #777;
+}
+.button-white:hover {
+    background-color: white;
+    color: darkgreen;
+}
+.button-white::after {
+    background-color: white;
+    color: black;
 }
