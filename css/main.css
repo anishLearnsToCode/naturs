@@ -111,21 +111,6 @@ a {
       background-color: white;
       color: black; }
 
-.header {
-  position: relative;
-  height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  color: white; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-
 .heading-primary {
   display: block;
   color: white;
