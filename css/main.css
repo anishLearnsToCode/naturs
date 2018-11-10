@@ -71,6 +71,52 @@ a {
   0% {
     opacity: 0; } }
 
+.heading-primary {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  text-align: center; }
+  .heading-primary > span {
+    display: block; }
+  .heading-primary__main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: slideFromLeft, opacityChange;
+    animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/ }
+  .heading-primary__sub {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: slideFromRight, opacityChange;
+    animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/ }
+
+.heading-primary {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  text-align: center; }
+  .heading-primary > span {
+    display: block; }
+  .heading-primary__main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: slideFromLeft, opacityChange;
+    animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/ }
+  .heading-primary__sub {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: slideFromRight, opacityChange;
+    animation-duration: 1s;
+    /*animation-timing-function: ease-out;*/ }
+
 .button {
   display: inline-block;
   padding: 1.5rem 4rem;
@@ -111,25 +157,17 @@ a {
       background-color: white;
       color: black; }
 
-.heading-primary {
-  display: block;
-  color: white;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  text-align: center; }
-  .heading-primary > span {
-    display: block; }
-  .heading-primary__main {
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: slideFromLeft, opacityChange;
-    animation-duration: 1s;
-    /*animation-timing-function: ease-out;*/ }
-  .heading-primary__sub {
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.75rem;
-    animation-name: slideFromRight, opacityChange;
-    animation-duration: 1s;
-    /*animation-timing-function: ease-out;*/ }
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.7)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  color: white; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
