@@ -50,13 +50,13 @@ a {
     color: white;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
@@ -112,21 +112,33 @@ a {
     /*animation-timing-function: ease-out;*/
 }
 
-@keyframes slideFromLeft{
-    0% { transform: translateX(-50px); }
+.animate {
+    animation-duration: 0.7s;
+}
+
+.animation__slide-in-left {
+    animation: slideInLeft;
+}
+@keyframes slideInLeft{
+    0% { transform: translateX(-5rem); }
 }
 
 @keyframes slideFromRight {
-    0% { transform: translateX(100px); }
+    0% { transform: translateX(10rem); }
 }
 
+.animation__slide-in-up {
+    animation-name: slideInUp;
+}
 @keyframes slideInUp {
-    0% { transform: translateY(50px); }
+    0% { transform: translateY(5rem); }
 }
 
+.animation__opacity-change {
+    animation-name: opacityChange;
+}
 @keyframes opacityChange {
     0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 
 .button {
@@ -140,9 +152,6 @@ a {
     font-weight: 700;
     font-size: 1.7rem;
     letter-spacing: .5rem;
-
-    animation-name: slideInUp, opacityChange;
-    animation-duration: 0.7s;
 
     transition: all 0.2s;
 }
@@ -172,15 +181,15 @@ a {
     opacity: 0;
 }
 
-.button-white {
+.button--white {
     background-color: white;
     color: #777;
 }
-.button-white:hover {
+.button--white:hover {
     background-color: white;
     color: darkgreen;
 }
-.button-white::after {
+.button--white::after {
     background-color: white;
     color: black;
 }
