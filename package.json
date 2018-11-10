@@ -6,9 +6,11 @@
   "dependencies": {
     "static-server": "^2.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  },
   "scripts": {
-    "test": "echo \"testing the npm scripts\""
+    "test": "echo test succesfull"
   },
   "repository": {
     "type": "git",
