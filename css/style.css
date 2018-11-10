@@ -5,19 +5,24 @@ Medium green: #55c57a
 Dark green: #28b485
 */
 
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    /*padding: 10px;*/
+
+    box-sizing: border-box;
 }
 
 a {
@@ -47,12 +52,12 @@ a {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .absolute-center {
@@ -88,9 +93,9 @@ a {
 }
 
 .heading-primary-main {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: slideFromLeft, opacityChange;
     animation-duration: 1s;
@@ -98,9 +103,9 @@ a {
 }
 
 .heading-primary-sub {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 17.5px;
+    letter-spacing: 1.75rem;
 
     animation-name: slideFromRight, opacityChange;
     animation-duration: 1s;
@@ -126,15 +131,15 @@ a {
 
 .button {
     display: inline-block;
-    padding: 15px 40px;
-    border-radius: 200px;
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.2) ;
+    padding: 1.5rem 4rem;
+    border-radius: 20rem;
+    box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.2) ;
 
     position: relative;
 
     font-weight: 700;
-    font-size: 17px;
-    letter-spacing: 5px;
+    font-size: 1.7rem;
+    letter-spacing: .5rem;
 
     animation-name: slideInUp, opacityChange;
     animation-duration: 0.7s;
@@ -142,12 +147,12 @@ a {
     transition: all 0.2s;
 }
 .button:hover {
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.4) ;
+    box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.4) ;
     transform: translateY(-5px);
 }
 .button:active {
     transform: translateY(0);
-    box-shadow: 0 17px 47px 0  rgba(246,247,242,0.1) ;
+    box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.1) ;
 }
 .button::after {
     content: '';
@@ -158,7 +163,7 @@ a {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
 
     transition: all 0.4s;
 }
