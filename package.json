@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "this is a sample static website that i am building alongside the course that I am taking by johnas schmidt on advanced CSS and Sass",
+  "main": "index.js",
+  "dependencies": {
+    "static-server": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"testing the npm scripts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anishLearnsToCode/naturs.git"
+  },
+  "author": "anishLearnsToCode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anishLearnsToCode/naturs/issues"
+  },
+  "homepage": "https://github.com/anishLearnsToCode/naturs#readme"
+}
