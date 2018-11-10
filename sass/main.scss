@@ -1,0 +1,205 @@
+/*
+
+COLORS:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+
+  background-image:
+          linear-gradient(to right bottom,
+          rgba($color-primary-light, 0.7),
+          rgba($color-primary-dark, 0.7)),
+          url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  color: white;
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.heading-primary {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.heading-primary > span {
+  display: block;
+}
+
+.heading-primary-main {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+
+  animation-name: slideFromLeft, opacityChange;
+  animation-duration: 1s;
+  /*animation-timing-function: ease-out;*/
+}
+
+.heading-primary-sub {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.75rem;
+
+  animation-name: slideFromRight, opacityChange;
+  animation-duration: 1s;
+  /*animation-timing-function: ease-out;*/
+}
+
+.animate {
+  animation-duration: 0.7s;
+}
+
+.animation__slide-in-left {
+  animation: slideInLeft;
+}
+@keyframes slideInLeft{
+  0% { transform: translateX(-5rem); }
+}
+
+@keyframes slideFromRight {
+  0% { transform: translateX(10rem); }
+}
+
+.animation__slide-in-up {
+  animation-name: slideInUp;
+}
+@keyframes slideInUp {
+  0% { transform: translateY(5rem); }
+}
+
+.animation__opacity-change {
+  animation-name: opacityChange;
+}
+@keyframes opacityChange {
+  0% { opacity: 0; }
+}
+
+.button {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 20rem;
+  box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.2) ;
+
+  position: relative;
+
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: .5rem;
+
+  transition: all 0.2s;
+}
+.button:hover {
+  box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.4) ;
+  transform: translateY(-5px);
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.1) ;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+
+  transition: all 0.4s;
+}
+.button:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.button--white {
+  background-color: white;
+  color: #777;
+}
+.button--white:hover {
+  background-color: white;
+  color: darkgreen;
+}
+.button--white::after {
+  background-color: white;
+  color: black;
+}

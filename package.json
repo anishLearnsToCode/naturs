@@ -10,7 +10,8 @@
     "node-sass": "^4.10.0"
   },
   "scripts": {
-    "test": "echo test succesfull"
+    "test": "echo test succesfull",
+    "sass":"node-sass sass/main.scss css/main.css"
   },
   "repository": {
     "type": "git",
