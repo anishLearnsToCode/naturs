@@ -7,11 +7,6 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
   box-sizing: border-box; }
 
 a {
@@ -71,6 +66,13 @@ a {
   0% {
     opacity: 0; } }
 
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
 .heading-primary {
   display: block;
   color: white;
@@ -93,6 +95,13 @@ a {
     animation-name: slideFromRight, opacityChange;
     animation-duration: 1s;
     /*animation-timing-function: ease-out;*/ }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
 
 .heading-primary {
   display: block;
