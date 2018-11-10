@@ -1,0 +1,34 @@
+
+.animate {
+  animation-duration: 0.7s;
+}
+
+.animation {
+  &--delay {
+    animation-delay: 1s;
+  }
+
+  &__slide-in-left {
+    animation: slideInLeft;
+  }
+  &__slide-in-up {
+    animation-name: slideInUp;
+  }
+  &__opacity-change {
+    animation-name: opacityChange;
+  }
+}
+
+
+@keyframes slideInLeft{
+  0% { transform: translateX(-5rem); }
+}
+@keyframes slideFromRight {
+  0% { transform: translateX(10rem); }
+}
+@keyframes slideInUp {
+  0% { transform: translateY(5rem); }
+}
+@keyframes opacityChange {
+  0% { opacity: 0; }
+}

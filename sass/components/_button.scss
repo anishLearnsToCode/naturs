@@ -1,0 +1,59 @@
+.button {
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 20rem;
+  box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.2) ;
+
+  position: relative;
+
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: .5rem;
+
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.4) ;
+    transform: translateY(-5px);
+
+    &::after {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.1) ;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+
+    transition: all 0.4s;
+  }
+
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &:hover {
+      background-color: $color-white;
+      color: darkgreen;
+    }
+
+    &::after {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+}
