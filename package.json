@@ -7,11 +7,12 @@
     "static-server": "^2.2.1"
   },
   "devDependencies": {
+    "live-server": "^1.2.0",
     "node-sass": "^4.10.0"
   },
   "scripts": {
     "test": "echo test succesfull",
-    "sass":"node-sass sass/main.scss css/main.css"
+    "sass": "node-sass sass/main.scss css/main.css -w"
   },
   "repository": {
     "type": "git",

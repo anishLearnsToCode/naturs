@@ -11,6 +11,10 @@ $color-primary: #7ed56f;
 $color-primary-light: #55c57a;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
+$color-white: white;
+$color-black: black;
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -26,7 +30,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
 
   box-sizing: border-box;
 }
@@ -57,7 +61,7 @@ a {
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-  color: white;
+  color: $color-white;
 }
 
 .header__logo-box {
@@ -92,7 +96,7 @@ a {
 
 .heading-primary {
   display: block;
-  color: white;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   text-align: center;
@@ -124,6 +128,11 @@ a {
 
 .animate {
   animation-duration: 0.7s;
+  animation-direction: revert;
+}
+
+.animation--delay {
+  animation-delay: 1s;
 }
 
 .animation__slide-in-left {
@@ -192,14 +201,14 @@ a {
 }
 
 .button--white {
-  background-color: white;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 .button--white:hover {
-  background-color: white;
+  background-color: $color-white;
   color: darkgreen;
 }
 .button--white::after {
-  background-color: white;
-  color: black;
+  background-color: $color-white;
+  color: $color-black;
 }
