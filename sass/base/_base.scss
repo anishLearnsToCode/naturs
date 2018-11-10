@@ -5,6 +5,9 @@
 }
 
 html {
+  // The standard browser font-size is 16px, so 62.5% is 10px
+  // This adds as the base unit to be used for the rem definitions where 1 rem = 10px
+  // and standard font size of 16px represented as 1.6rem
   font-size: 62.5%;
 }
 
