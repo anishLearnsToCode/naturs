@@ -1,0 +1,21 @@
+.margin-bottom-large { margin-bottom: 8rem; }
+.margin-bottom-medium { margin-bottom: 3rem; }
+.margin-bottom-small { margin-bottom: 1rem; }
+
+.margin-top-30 { margin-top: 3rem; }
+
+.uppercase { text-transform: uppercase; }
+
+.center { text-align: center; }
+
+.margin-center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}

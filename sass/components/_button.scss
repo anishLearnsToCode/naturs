@@ -57,3 +57,28 @@
     }
   }
 }
+
+.btn-text {
+  display: inline-block;
+  transition: all 0.5s;
+  font-size: $default-font-size;
+
+  &:link, &:visited {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary-dark;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+    border-bottom: 1px solid $color-primary-dark;
+    transform: translateY(-.5rem);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(0);
+  }
+}

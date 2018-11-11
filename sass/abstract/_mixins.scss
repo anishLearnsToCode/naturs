@@ -5,3 +5,18 @@
     clear: both;
   }
 }
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin linear-gradient-light {
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+}
+
+@mixin text-clip {
+  -webkit-background-clip: text;
+  color: transparent;
+}
