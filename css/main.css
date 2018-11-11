@@ -195,20 +195,46 @@ body {
 .btn-text {
   display: inline-block;
   transition: all 0.5s;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  padding: 5px 10px; }
   .btn-text:link, .btn-text:visited {
     color: #7ed56f;
-    border-bottom: 1px solid #7ed56f;
-    padding: 3px; }
+    border-bottom: 1px solid #7ed56f; }
   .btn-text:hover {
     color: white;
-    background-color: #28b485;
+    background-color: #7ed56f;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid #28b485;
     transform: translateY(-0.5rem); }
   .btn-text:active {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 80%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    outline-offset: 1rem;
+    transition: transform, margin, width;
+    transition-duration: .5s;
+    position: absolute; }
+    .composition__photo--p1 {
+      top: 5rem;
+      left: 60%;
+      z-index: 1; }
+    .composition__photo--p2 {
+      top: 20rem;
+      left: 20%;
+      z-index: 0; }
+    .composition__photo:hover {
+      z-index: 100001;
+      transform: scale(1.03);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+      margin: 1rem; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .header {
   position: relative;
