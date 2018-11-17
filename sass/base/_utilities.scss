@@ -3,6 +3,20 @@
 .margin-bottom-small { margin-bottom: 1rem; }
 
 .margin-top-30 { margin-top: 3rem; }
+.margin-top-very-large { margin-bottom: 12rem; }
+.margin-top-large { margin-bottom: 8rem; }
+.margin-top-medium { margin-bottom: 3rem; }
+.margin-top-small { margin-bottom: 1rem; }
+
+.margin-move-up-small { margin-top: -1rem; }
+.margin-move-up-medium { margin-top: -3rem; }
+.margin-move-up-large { margin-top: -8rem; }
+.margin-move-up-very-large { margin-top: -14rem; }
+
+.padding-top-small { padding-top: 1rem; }
+.padding-top-medium { padding-top: 3rem; }
+.padding-top-large { padding-top: 8rem; }
+.padding-top-extra-large { padding-top: 12rem; }
 
 .uppercase { text-transform: uppercase; }
 
@@ -19,3 +33,6 @@
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
+
+.send-to-back { z-index: -10; }
+.send-to-front { z-index: 1; }

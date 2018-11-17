@@ -12,8 +12,25 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin absolute-center-box {
+  @include absolute-center;
+  top: 50%;
+}
+
+@mixin text-align-center {
+  text-align: center;
+}
+
 @mixin linear-gradient-light {
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+}
+@mixin linear-gradient-neon {
+  //background-image: linear-gradient(45deg, red, $color-primary-light, $color-primary-dark, orange, $color-black);
+  background-image: linear-gradient(45deg, orange, $color-primary-light, red, green);
 }
 
 @mixin text-clip {
