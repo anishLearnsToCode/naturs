@@ -80,6 +80,7 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
     border-bottom: 1px solid $color-primary-dark;
     transform: translateY(-.5rem);
+    cursor: pointer;
   }
 
   &:active {
