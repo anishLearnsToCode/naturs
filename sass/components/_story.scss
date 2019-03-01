@@ -2,7 +2,7 @@
   width: 75%;
   @include margin-center;
   box-shadow: 0 3rem 10rem rgba($color-black, .1);
-  background-color: $color-white;
+  background-color: rgba($color-white, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;

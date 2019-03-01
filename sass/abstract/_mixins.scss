@@ -41,3 +41,7 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+@mixin rounded-edges {
+  border-radius: 3px;
+}

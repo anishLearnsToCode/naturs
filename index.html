@@ -12,7 +12,26 @@
         
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
+
+
     <body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">MENU</label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="mavigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a> </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Your Benifits</a> </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a> </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a> </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">About Natours</a> </li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="img/logo-white.png" alt="Company Logo">
@@ -63,6 +82,7 @@
             </div>
         </section>
 
+        <!-- Features Section -->
         <section class="section-features">
             <div class="row">
                 <div class="col-1-of-2">
@@ -216,12 +236,11 @@
         </section>
 
 
-
         <!-- This is the stories section -->
         <section class="section-stories">
 
             <div class="background-video">
-                <video class="background__content" autoplay muted loop>
+                <video class="background-video__content" autoplay muted>
                     <source src="img/video.mp4" type="video/mp4">
                     <source src="img/video.webm" type="video/webm">
                 </video>
@@ -275,6 +294,57 @@
                 <a class="btn-text uppercase">Discover all our tours &rightarrow;</a>
             </div>
         </section>
+
+
+        <!-- Booking Section -->
+        <section class="section-booking">
+            <div class="row">
+                <div class="booking-box">
+
+                    <div class="booking-box__form">
+                        <form action="#" class="form">
+                            <div class="margin-bottom-medium padding-top-medium">
+                                <h2 class="heading-secondary">Start Booking Now</h2>
+                            </div>
+
+                            <div class="form__group">
+                                <input class="form__input" type="text" placeholder="Name" id="test" required>
+                                <label for="test" class="form__label">Full Name</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input class="form__input" type="text" placeholder="Email Address" id="email-test" required>
+                                <label for="email-test" class="form__label">Email Address</label>
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form__radio-group">
+                                    <input class="form__radio-input" type="radio" id="small" name="size">
+                                    <label class="form__radio-label" for="small">
+                                        <span class="form__radio-button"></span>
+                                        Small Tour Group
+                                    </label>
+                                </div>
+
+                                <div class="form__radio-group">
+                                    <input class="form__radio-input" type="radio" id="large" name="size">
+                                    <label class="form__radio-label" for="large">
+                                        <span class="form__radio-button"></span>
+                                        Large Tour Group
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__group padding-top-medium">
+                                <button class="button button--green">Next Step</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
     </body>
 </html>

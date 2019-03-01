@@ -12,6 +12,10 @@
 
   transition: all 0.2s;
 
+  // Changing for the button element
+  cursor: pointer;
+  border: none;
+
   &:hover {
     box-shadow: 0 1.7rem 4.7rem 0  rgba(246,247,242,0.4) ;
     transform: translateY(-5px);
@@ -60,6 +64,16 @@
   &--green {
     background-color: $color-primary;
     color: $color-white;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-primary;
+      color: $color-white;
+    }
   }
 }
 
