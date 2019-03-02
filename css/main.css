@@ -172,6 +172,9 @@ body {
 .send-to-front {
   z-index: 1; }
 
+.display-block {
+  display: block; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -607,6 +610,18 @@ body {
     transform: scale(80); }
   .navigation__checkbox:checked ~ .navigation__nav {
     display: block; }
+  .navigation__checkbox:checked + .navigation__button > .navigation__icon {
+    background-color: transparent; }
+    .navigation__checkbox:checked + .navigation__button > .navigation__icon::before {
+      transform: translateY(0.8rem) rotate(135deg); }
+    .navigation__checkbox:checked + .navigation__button > .navigation__icon::after {
+      transform: translateY(-0.8rem) rotate(-135deg); }
+  .navigation__checkbox:hover {
+    cursor: pointer; }
+    .navigation__checkbox:hover:checked + .navigation__button > .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__checkbox:hover:checked + .navigation__button > .navigation__icon::after {
+      top: .8rem; }
 
 .navigation__button {
   background-color: white;
@@ -618,8 +633,12 @@ body {
   width: 7rem;
   z-index: 30;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
-  .navigation__button :hover {
+  .navigation__button:hover {
     cursor: pointer; }
+    .navigation__button:hover .navigation__icon::before {
+      top: -.9rem; }
+    .navigation__button:hover .navigation__icon::after {
+      top: .9rem; }
 
 .navigation__background {
   border-radius: 50%;
@@ -668,6 +687,29 @@ body {
     background-position: 100%;
     color: #28b485;
     transform: translateX(1rem); }
+
+.navigation__icon {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%; }
+  .navigation__icon:hover {
+    cursor: pointer; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #28b485;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    left: 0;
+    content: '';
+    position: absolute;
+    transition: all .1s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
 
 .section-about {
   margin-top: -20vh;
