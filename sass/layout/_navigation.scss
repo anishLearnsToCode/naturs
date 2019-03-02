@@ -1,6 +1,16 @@
 .navigation {
   &__checkbox {
     display: none;
+
+    &:checked {
+      & ~ .navigation__background {
+        transform: scale(80);
+      }
+
+      & ~ .navigation__nav {
+        display: block;
+      }
+    }
   }
 
   &__button {
@@ -8,6 +18,7 @@
     @include position-fixed(6rem, 6rem);
     @include circle(7rem);
     z-index: 30;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
 
     :hover {
       cursor: pointer;
@@ -17,13 +28,13 @@
   &__background {
     @include circle(6rem);
     @include position-fixed(6.5rem, 6.5rem);
-    background-image: radial-gradient($color-primary-light 0%, $color-primary-dark 100%);
+    background-image: radial-gradient($color-primary-light 2%, $color-primary-dark 100%);
     z-index: 10;
-
-    transform: scale(80);
+    transition: transform .4s cubic-bezier($bezier-ease-in-sine);
   }
 
   &__nav {
+    display: none;
     height: 100vh;
     width: 100%;
     //background: lightgray;
@@ -58,18 +69,15 @@
       color: $color-grey-dark;
     }
 
-    &:link,
-    &:visited {
-
-    }
-
     &:hover,
     &:active {
       background-position: 100%;
       color: $color-primary-dark;
       transform: translateX(1rem);
-
-
     }
   }
+
+  //&__checkbox:checked ~ &__background {
+  //  transform: scale(80);
+  //}
 }

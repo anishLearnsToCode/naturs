@@ -25,3 +25,7 @@ $gutter-horizontal: 4rem;
 
 // Composition
 $infinity: 100001;
+
+// Bezier Curves
+$bezier-ease-in-out-quint: .86, 0, .07, 1;
+$bezier-ease-in-sine: .47, 0, .745, .715;

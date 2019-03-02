@@ -603,6 +603,10 @@ body {
 
 .navigation__checkbox {
   display: none; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(80); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    display: block; }
 
 .navigation__button {
   background-color: white;
@@ -612,7 +616,8 @@ body {
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
-  z-index: 30; }
+  z-index: 30;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
   .navigation__button :hover {
     cursor: pointer; }
 
@@ -623,11 +628,12 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#55c57a 0%, #28b485 100%);
+  background-image: radial-gradient(#55c57a 2%, #28b485 100%);
   z-index: 10;
-  transform: scale(80); }
+  transition: transform 0.4s cubic-bezier(0.47, 0, 0.745, 0.715); }
 
 .navigation__nav {
+  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
