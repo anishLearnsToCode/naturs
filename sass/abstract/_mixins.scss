@@ -45,3 +45,22 @@
 @mixin rounded-edges {
   border-radius: 3px;
 }
+
+@mixin circle($radius) {
+  border-radius: 50%;
+  height: $radius;
+  width: $radius;
+}
+
+@mixin on-top {
+  z-index: 1;
+}
+@mixin on-top-everything {
+  z-index: 2;
+}
+
+@mixin position-fixed($top, $right) {
+  position: fixed;
+  top: $top;
+  right: $right;
+}
